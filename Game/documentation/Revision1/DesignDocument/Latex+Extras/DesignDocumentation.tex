@@ -1,0 +1,1257 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{float}
+
+\usepackage{amssymb}
+
+\renewcommand{\arraystretch}{1.5}
+\usepackage{tabulary}
+\usepackage[newcommands]{ragged2e}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{fancyhdr}
+\usepackage{fancyhdr}
+\fancyhead[L]{December 8, 2015}
+\fancyhead[C]{SE 3XA3 Design Document}
+\fancyhead[R]{The A Team}
+\pagestyle{fancy}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Design Documentation
+}
+\author{Gill, Surinder\\
+		1308896
+		\and
+		Hu, Joshua\\
+		1311940
+		\and
+		Lago, Nick\\
+		1302613}
+\date{December 8, 2015}							% Activate to display a given date or no date
+
+%---------------------------------------------------------------------
+\begin{document}
+\maketitle
+\newpage
+%---------------------------------------------------------------------
+\tableofcontents
+\listoftables
+\newpage
+%---------------------------------------------------------------------
+
+\section{Revision History}
+
+\begin{table}[hp]
+\caption{Revision History: Proof of Concept Plan}
+\begin{center}
+\label{tab:}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{DATE} & \textbf{DEVELOPER} & \textbf{CHANGE} & \textbf{REVISION}\\
+\hline
+November 6, 2015 & Gill, Surinder & Initial Draft & 0\\
+\hline
+November 6, 2015 & Hu, Joshua & Initial Draft & 0\\
+\hline
+November 6, 2015 & Lago, Nick & Initial Draft & 0\\
+\hline
+December 7, 2015 & Gill, Surinder & Section 1,2,3,4,5,6,7,8 & 1\\
+\hline
+December 7, 2015 & Hu, Joshua & Section 1,2,3,4,5,6,7,8  & 1\\
+\hline
+December 7, 2015 & Lago, Nick & Section 1,2,3,4,5,6,7,8  & 1\\
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}
+
+\subsection{\textcolor{red}{Legend}}
+Blue text indicate removed material. Red text indicated added material. A coloured section title indicates the entirety of the section was affected.
+
+
+\newpage
+%---------------------------------------------------------------------
+\section{Introduction}
+
+This document indicates the Module Interface Specifications for the implementation
+of 'Floppy Fish'. The intent of this document is to facilitate design and maintenance of the project \textcolor{red}{through the clear specification of the interfacing between modules in the program}.\\
+\\
+Complementary documents include the System Requirement Specifications and Module
+Guide.\\
+\\
+\textcolor{red}{The project "Floppy Fish" requires the MIS as it is a software project that is dependant on its internal behaviour and the way its modules interact with each other. The "Floppy Fish" project has at this stage completed critical phases and as such benefits by providing a detailed description of its design to act as a record of its model. This supports the other available documentation by providing a complete and comprehensive encapsulation of the project.}\\
+\\
+\textcolor{red}{The document consists of a section entailing the module hierarchy, giving an overview of the modules in the project, a section detailing the MISs of each specific module, a section providing anticipated and unlikely changes, and a traceability matrix from the elicited requirements.}
+
+\newpage
+%---------------------------------------------------------------------
+\section{Module Hierarchy}
+
+\begin{table}[H]
+\caption{Module Hierarchy}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Level 1} & \textbf{Level 2} & \textbf{Level 3}\\
+\hline
+Hardware-Hiding Module & & \\
+\hline
+Behaviour-Hiding Module & Rendering Module & Animation Module\\
+\hline
+Software Decision Module & Initializer Module & Collision Module\\
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+
+
+\newpage
+%---------------------------------------------------------------------
+
+\section{\textcolor{blue}{MIS's of Main.js}}
+\subsubsection{\texttt{Flappy\_Fish.Draw}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ clear & - & - & - \\ 
+ rect & int, int, int, int, int & - & - \\ 
+ circle & int, int, int, int & - & - \\ 
+ image & image, int, int & - & - \\ 
+ sprite & image, int , int, int, int, int, int, int, int, int & - & - \\ 
+ semiCircler & int, int, int, int & - & - \\ 
+ text & string, int, int, int, int & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+\subsubsection{Environment Variables}
+screen: computer/device display
+
+\subsubsection{Access Program Semantics} 
+ \textbf{Input:} Each function takes in an assortment of integers used for the location of the drawing to take place. In addition to this some take in a string or image depending on what the function is drawing.\\
+ \textbf{Transition:} All of these functions will \textit{only} modify the state of the environment variable screen.
+
+\subsubsection{\texttt{Flappy\_Fish.Input}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ set & function & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+x: int\\
+y: int\\
+tapped: boolean
+\subsubsection{Environment Variables}
+
+
+\subsubsection{Access Program Semantics} 
+ \textbf{Input:} This will take in data in the form of a function. \\
+ \textbf{Transition:} This does not modify anything. Later another function will use the data from input to modify the screen displaying the game.
+
+
+
+\subsubsection{\texttt{Flappy\_Fish.BottomBar}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update & - & - & - \\ 
+render & - & - & - \\ 
+respawn & - & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+x: int\\
+y: int\\
+r: int\\
+vx: int \\
+bg: image \\
+name: string\\
+\subsubsection{Environment Variables}
+Screen: Display Device
+
+
+\subsubsection{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} Uses the velocity varaible (vx) to update the location variable (x) of the bottom bar.\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies the screen, drawing the bottom bar at the locations specified.\\
+ \textbf{Respawn:}  \\
+ \textit{Transition:} Modifies the variable x which controls the location of the bottom bar on the horizontal axis.\\
+
+
+\subsubsection{\texttt{Flappy\_Fish.Pipe}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update &-  & - & - \\ 
+render & - & - & - \\ 
+respawn & - & - & - \\ 
+randomIntFromInterval & int, int & int & - \\
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+centerX: int\\
+coin: int\\
+w: int\\
+h: int \\
+vx: int \\
+type: string\\
+\subsubsection{Environment Variables}
+Screen: Display Device
+
+
+\subsubsection{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} Uses the velocity varaible (vx) to update the location variable (centerx) of the pipe.\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies the screen, drawing the pipe and coin (if the coin hasn't been obtained) at the locations specified. (Using draw.sprite)\\
+ \textbf{Respawn:}  \\
+ \textit{Transition:} Modifies the varaible that controls the x axis locaiton of the pipe and calls randomIntFromInterval to modify where the gap will be.\\
+ \textbf{randomIntFromInterval:} Takes in a min and max value both as integers. \\
+ \textit{Output:} Returns a number chosen at "random" from inbetween the min and max values.\\
+
+\subsubsection{\texttt{Flappy\_Fish.Bird}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update & - & - & - \\ 
+render &  -& - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+img: image\\
+gravity: int\\
+width: int\\
+height: int \\
+ix: int \\
+type: string\\
+iy: int \\
+fr: int \\
+vy: int \\
+vx: int \\
+velocity: int \\
+play: int\\
+jump: int \\
+rotation: int\\
+
+\subsubsection{Environment Variables}
+Screen: Display device\\
+Speakers: Devices speakers if applicable\\
+
+
+\subsubsection{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} Updates the location and rotation of the bird sprite. Modifies environmental variable speaker if applicable.\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies the screen, drawing the birdat the locations specified.\\
+
+\subsubsection{\texttt{Flappy\_Fish.Particle}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update & - & - & - \\ 
+render &  -& - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+x: int\\
+y: int\\
+r: int \\
+col: int \\
+type: string\\
+name: string \\
+dir: int\\
+vx: int \\
+vy: int \\
+remove: boolean \\
+
+
+
+\subsubsection{Environment Variables}
+Screen: Display device\\
+
+
+
+\subsubsection{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} adds velocity in the x (vx) and in the y (vy) to the particle. Updating its location varaibles (x,y).\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies environmental variable screen by using the draw function to draw a star or a circle.\\
+
+\subsubsection{\texttt{Flappy\_Fish.Collides}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ collides & \texttt{Flappy\_Fish.Bird}, \texttt{Flappy\_Fish.Pipe} & c1 or c2 & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+bx1: int\\
+by1: int \\
+bx2: int \\
+by2: int \\
+upx1: int\\
+upy1: int \\
+upx2: int \\
+upy2: int \\
+1px1: int \\
+1py1: int \\
+1px2: int \\
+1py2: int \\
+c1: int \\
+c2: int \\
+
+
+
+\subsubsection{Environment Variables}
+
+
+
+
+\subsubsection{Access Program Semantics} 
+
+
+\subsubsection{\texttt{Window.Splash}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ init & - & - & - \\ 
+ update & - & - & - \\ 
+ render & - & - & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+banner: image\\
+
+
+
+\subsubsection{Environment Variables}
+Screen: Display Device\\
+Speaker: Device Speakers (if applicable)\\
+
+\subsubsection{Access Program Semantics} 
+ \textbf{init:}  \\
+ \textit{Transition:} Modifies Floppy Fish's varaible distance and Floppy Fish's variable storing taps and Flappy Fish's variable storing coins gathered (to an initial value of 0). Pushes the bottombar (using the BottomBar function) at an initial coordinate. Lastly modifies the environmental variable speaker by playing a sound.\\
+ \textbf{update:}  \\
+ \textit{Transition:} calls all the update functions for evey entitiy pushed. Will change the state to play if the player has tapped.\\
+ \textbf{render:}  \\
+ \textit{Transition:} modifies the screen by using the Draw funciton in Floppy Fish to draw the banner.\\
+
+
+\subsubsection{\texttt{Window.Play}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ init & - & - & - \\ 
+ update & - & - & - \\ 
+ render & - & - & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+checkCollision: boolean\\
+
+
+
+\subsubsection{Environment Variables}
+Screen: Display Device\\
+Speaker: Device Speakers (if applicable)\\
+
+\subsubsection{Access Program Semantics} 
+ \textbf{init:}  \\
+ \textit{Transition:} Pusheds 3 pipes, a bird and the counter.\\
+ \textbf{update:}  \\
+ \textit{Transition:} modifies the gradient of the game.\\
+ \textbf{render:}  \\
+ \textit{Transition:} Modifies the count varaibles and draws them to the screen.\\
+
+
+\subsubsection{\texttt{Window.GameOver}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ getMedal & - & string & - \\ 
+ getHighScore & - & \texttt{FloppyFish.score.coins} & - \\ 
+ init & - & - & - \\ 
+ update & - & - & - \\ 
+ render & - & - & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+checkCollision: boolean\\
+
+
+
+\subsubsection{Environment Variables}
+Screen: Display Device\\
+Speaker: Device Speakers (if applicable)\\
+
+\subsubsection{Access Program Semantics} 
+ \textbf{init:}  \\
+ \textit{Transition:} Modifies environmental variable speaker by playing sound. Updates state variables from multiple other funcitons.\\
+ \textbf{update:}  \\
+ \textit{Transition:} Modifies the value of Floppy Fish variable holding if the user has tapped.\\
+ \textbf{render:}  \\
+ \textit{Transition:} Modifies the environmental variable screen as it uses the draw function to draw images and text.\\
+ \textbf{getMedal:}  \\
+ \textit{Output:} Outputs a string containing which medal the user has won.\\
+ \textbf{getHighScore:}  \\
+ \textit{Output:} Outputs the maximum amount of coins the user has received based on the cookies the user has stored.\\
+
+
+%-------------------------------------
+
+\section{\textcolor{blue}{MIS of cookieHandler.js}}
+\subsubsection{\texttt{cookieHandler.js}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ getCookie & string & string & - \\ 
+ setCookie & string, int, int & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+name: string\\
+ca: string\\
+c: string\\
+d: object\\
+bigNum: long\\
+expires: string\\
+\subsubsection{Environment Variables}
+path: cookie storage
+
+\subsubsection{Access Program Semantics} 
+ \textbf{getCookie:} Checks for a cookie with the name returns the cookie name as a string.\\
+ \textbf{setCookie:} Creates a cookie with a value and expiry date.
+
+
+
+%-------------------------------------
+
+\section{\textcolor{blue}{MIS of sound.js}}
+\subsubsection{\texttt{sound.js}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ play\_sounds & string & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+soundJump: object\\
+soundScore: object\\
+soundHit: object\\
+soundDie: object\\
+soundSwoosh: object\\
+sounds\_max: int\\
+sounds\_length: int\\
+audiosounds: object\\
+\subsubsection{Environment Variables}
+speaker: computer/device audio output
+
+\subsubsection{Access Program Semantics} 
+ \textbf{play\_sounds:} If the audio objects n the array object are not finished load and play them.
+ 
+ 
+ 
+ 
+ %-------------------------------------
+
+\section{\textcolor{blue}{MIS of windowSetter.js}}
+\subsubsection{\texttt{window.requestAnimFrame}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ requestAnimFrame & - & function & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Assumptions}
+No assumptions
+
+\subsubsection{State Variables}
+\subsubsection{Environment Variables}
+screen: computer/device display
+
+\subsubsection{Access Program Semantics} 
+ \textbf{requestAnimFrame:} Requests an animation frame for various browsers and times out if no applicable animation frame is available.
+
+\section{\textcolor{red}{MIS}}
+\subsection{Namespace.js}
+\subsubsection{\texttt{Flappy\_Fish}}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ init & - & - & - \\ 
+ resize & - & - & - \\ 
+ update & - & - & - \\ 
+ render & - & - & - \\ 
+ loop & - & - & - \\ 
+ changeState & state & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+requestAnimFrame(input) function is defined in a previous JavaScript class so Animation Frame functions can be called in the Namespace.
+\paragraph{State Variables}
+Flappy\_Fish.WIDTH: int \\
+Flappy\_Fish.HEIGHT: int \\
+Flappy\_Fish.scale: int \\
+Flappy\_Fish.offset.top: int \\
+Flappy\_Fish.offset.left: int \\ 
+Flappy\_Fish.entities: array \\
+Flappy\_Fish.currentWidth: null \\
+Flappy\_Fish.currentHeight: null \\
+Flappy\_Fish.canvas: null \\ 
+Flappy\_Fish.ctx: null \\
+Flappy\_Fish.score.taps: int \\
+Flappy\_Fish.score.coins: int \\
+Flappy\_Fish.distance: int \\
+Flappy\_Fish.digits: array \\
+Flappy\_Fish.fonts: array \\ 
+Flappy\_Fish.RATIO: null \\
+Flappy\_Fish.game: null \\
+Flappy\_Fish.currentWidth: null \\
+Flappy\_Fish.currentHeight: null \\
+Flappy\_Fish.canvas: null \\
+Flappy\_Fish.ua: null \\
+Flappy\_Fish.android: null \\
+Flappy\_Fish.ios: null \\
+
+\paragraph{Environment Variables}
+Screen: Display Output Device \\
+Mouse: Input Device \\
+Keyboard: Input Device \\
+Speakers: Audio Output Device 
+
+\paragraph{Access Program Semantics} 
+ \textbf{init: Transition: } Initializes multiple game variables and sets the canvas for the desired device.     This function initializes the game .\\
+ \textbf{resize: Transition:} Maintains the aspect ratio of the game after resizing of the browser window and across multiple platforms.\\
+  \textbf{update: Transition:} Update the game and restore the tapped state of the game.\\
+   \textbf{loop: Transition:} Iterates the updating and rendering of the game. \\
+    \textbf{changeState: Input:} The state of the game that it is being changed to. \\
+    \textbf{changeState: Transition:} The state of the game that it is being changed to. \\
+
+ 
+ 
+\subsection{Main.js}
+\subsubsection{\texttt{Flappy\_Fish.Draw}}
+
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ clear & - & - & - \\ 
+ rect & int, int, int, int, int & - & - \\ 
+ circle & int, int, int, int & - & - \\ 
+ image & image, int, int & - & - \\ 
+ sprite & image, int , int, int, int, int, int, int, int, int & - & - \\ 
+ semiCircler & int, int, int, int & - & - \\ 
+ text & string, int, int, int, int & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions.
+
+\paragraph{State Variables}
+
+\paragraph{Environment Variables}
+screen: computer/device display
+
+\paragraph{Access Program Semantics} 
+ \textbf{Input:} Each function takes in an assortment of integers used for the location of the drawing to take place. In addition to this some take in a string or image depending on what the function is drawing.\\
+ \textbf{Transition:} All of these functions will \textit{only} modify the state of the environment variable screen.
+
+\subsubsection{\texttt{Flappy\_Fish.Input}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ set & function & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+x: int\\
+y: int\\
+tapped: boolean
+\paragraph{Environment Variables}
+
+
+\paragraph{Access Program Semantics} 
+ \textbf{Input:} This will take in data in the form of a function. \\
+ \textbf{Transition:} This does not modify anything. Later another function will use the data from input to modify the screen displaying the game.
+
+
+
+\subsubsection{\texttt{Flappy\_Fish.BottomBar}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update & - & - & - \\ 
+render & - & - & - \\ 
+respawn & - & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+x: int\\
+y: int\\
+r: int\\
+vx: int \\
+bg: image \\
+name: string\\
+\paragraph{Environment Variables}
+Screen: Display Device
+
+
+\paragraph{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} Uses the velocity varaible (vx) to update the location variable (x) of the bottom bar.\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies the screen, drawing the bottom bar at the locations specified.\\
+ \textbf{Respawn:}  \\
+ \textit{Transition:} Modifies the variable x which controls the location of the bottom bar on the horizontal axis.\\
+
+
+\subsubsection{\texttt{Flappy\_Fish.Pipe}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update &-  & - & - \\ 
+render & - & - & - \\ 
+respawn & - & - & - \\ 
+randomIntFromInterval & int, int & int & - \\
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+centerX: int\\
+coin: int\\
+w: int\\
+h: int \\
+vx: int \\
+type: string\\
+\paragraph{Environment Variables}
+Screen: Display Device
+
+
+\paragraph{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} Uses the velocity varaible (vx) to update the location variable (centerx) of the pipe.\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies the screen, drawing the pipe and coin (if the coin hasn't been obtained) at the locations specified. (Using draw.sprite)\\
+ \textbf{Respawn:}  \\
+ \textit{Transition:} Modifies the varaible that controls the x axis locaiton of the pipe and calls randomIntFromInterval to modify where the gap will be.\\
+ \textbf{randomIntFromInterval:} Takes in a min and max value both as integers. \\
+ \textit{Output:} Returns a number chosen at "random" from inbetween the min and max values.\\
+
+\subsubsection{\texttt{Flappy\_Fish.Bird}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update & - & - & - \\ 
+render &  -& - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+img: image\\
+gravity: int\\
+width: int\\
+height: int \\
+ix: int \\
+type: string\\
+iy: int \\
+fr: int \\
+vy: int \\
+vx: int \\
+velocity: int \\
+play: int\\
+jump: int \\
+rotation: int\\
+
+\paragraph{Environment Variables}
+Screen: Display device\\
+Speakers: Devices speakers if applicable\\
+
+
+\paragraph{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} Updates the location and rotation of the bird sprite. Modifies environmental variable speaker if applicable.\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies the screen, drawing the birdat the locations specified.\\
+
+\subsubsection{\texttt{Flappy\_Fish.Particle}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ update & - & - & - \\ 
+render &  -& - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+x: int\\
+y: int\\
+r: int \\
+col: int \\
+type: string\\
+name: string \\
+dir: int\\
+vx: int \\
+vy: int \\
+remove: boolean \\
+
+
+
+\paragraph{Environment Variables}
+Screen: Display device\\
+
+
+
+\paragraph{Access Program Semantics} 
+ \textbf{Update:}  \\
+ \textit{Transition:} adds velocity in the x (vx) and in the y (vy) to the particle. Updating its location varaibles (x,y).\\
+ \textbf{Render:}  \\
+ \textit{Transition:} Modifies environmental variable screen by using the draw function to draw a star or a circle.\\
+
+\subsubsection{\texttt{Flappy\_Fish.Collides}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ collides & \texttt{Flappy\_Fish.Bird}, \texttt{Flappy\_Fish.Pipe} & c1 or c2 & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+bx1: int\\
+by1: int \\
+bx2: int \\
+by2: int \\
+upx1: int\\
+upy1: int \\
+upx2: int \\
+upy2: int \\
+1px1: int \\
+1py1: int \\
+1px2: int \\
+1py2: int \\
+c1: int \\
+c2: int \\
+
+
+
+\paragraph{Environment Variables}
+
+
+
+
+\paragraph{Access Program Semantics} 
+
+
+\subsubsection{\texttt{Window.Splash}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ init & - & - & - \\ 
+ update & - & - & - \\ 
+ render & - & - & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+banner: image\\
+
+
+
+\paragraph{Environment Variables}
+Screen: Display Device\\
+Speaker: Device Speakers (if applicable)\\
+
+\paragraph{Access Program Semantics} 
+ \textbf{init:}  \\
+ \textit{Transition:} Modifies Floppy Fish's varaible distance and Floppy Fish's variable storing taps and Flappy Fish's variable storing coins gathered (to an initial value of 0). Pushes the bottombar (using the BottomBar function) at an initial coordinate. Lastly modifies the environmental variable speaker by playing a sound.\\
+ \textbf{update:}  \\
+ \textit{Transition:} calls all the update functions for evey entitiy pushed. Will change the state to play if the player has tapped.\\
+ \textbf{render:}  \\
+ \textit{Transition:} modifies the screen by using the Draw funciton in Floppy Fish to draw the banner.\\
+
+
+\subsubsection{\texttt{Window.Play}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ init & - & - & - \\ 
+ update & - & - & - \\ 
+ render & - & - & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+checkCollision: boolean\\
+
+
+
+\paragraph{Environment Variables}
+Screen: Display Device\\
+Speaker: Device Speakers (if applicable)\\
+
+\paragraph{Access Program Semantics} 
+ \textbf{init:}  \\
+ \textit{Transition:} Pusheds 3 pipes, a bird and the counter.\\
+ \textbf{update:}  \\
+ \textit{Transition:} modifies the gradient of the game.\\
+ \textbf{render:}  \\
+ \textit{Transition:} Modifies the count varaibles and draws them to the screen.\\
+
+
+\subsubsection{\texttt{Window.GameOver}}
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ getMedal & - & string & - \\ 
+ getHighScore & - & \texttt{FloppyFish.score.coins} & - \\ 
+ init & - & - & - \\ 
+ update & - & - & - \\ 
+ render & - & - & - \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+checkCollision: boolean\\
+
+
+
+\paragraph{Environment Variables}
+Screen: Display Device\\
+Speaker: Device Speakers (if applicable)\\
+
+\paragraph{Access Program Semantics} 
+ \textbf{init:}  \\
+ \textit{Transition:} Modifies environmental variable speaker by playing sound. Updates state variables from multiple other funcitons.\\
+ \textbf{update:}  \\
+ \textit{Transition:} Modifies the value of Floppy Fish variable holding if the user has tapped.\\
+ \textbf{render:}  \\
+ \textit{Transition:} Modifies the environmental variable screen as it uses the draw function to draw images and text.\\
+ \textbf{getMedal:}  \\
+ \textit{Output:} Outputs a string containing which medal the user has won.\\
+ \textbf{getHighScore:}  \\
+ \textit{Output:} Outputs the maximum amount of coins the user has received based on the cookies the user has stored.\\
+
+
+%-------------------------------------
+
+\subsection{cookieHandler.js}
+\subsubsection{\texttt{cookieHandler.js}}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ getCookie & string & string & - \\ 
+ setCookie & string, int, int & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+name: string\\
+ca: string\\
+c: string\\
+d: object\\
+bigNum: long\\
+expires: string\\
+\paragraph{Environment Variables}
+path: cookie storage
+
+\paragraph{Access Program Semantics} 
+ \textbf{getCookie:} Checks for a cookie with the name returns the cookie name as a string.\\
+ \textbf{setCookie:} Creates a cookie with a value and expiry date.
+
+%-------------------------------------
+
+\subsection{sound.js}
+\subsubsection{\texttt{sound.js}}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ play\_sounds & string & - & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+soundJump: object\\
+soundScore: object\\
+soundHit: object\\
+soundDie: object\\
+soundSwoosh: object\\
+sounds\_max: int\\
+sounds\_length: int\\
+audiosounds: object\\
+\paragraph{Environment Variables}
+speaker: computer/device audio output
+
+\paragraph{Access Program Semantics} 
+ \textbf{play\_sounds:} If the audio objects n the array object are not finished load and play them.
+ 
+ 
+ 
+ 
+ %-------------------------------------
+
+\subsection{windowSetter.js}
+\subsubsection{\texttt{window.requestAnimFrame}}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & In & Out & Exceptions \\ 
+ \hline \hline
+ requestAnimFrame & - & function & - \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Assumptions}
+No assumptions
+
+\paragraph{State Variables}
+\paragraph{Environment Variables}
+screen: computer/device display
+
+\paragraph{Access Program Semantics} 
+ \textbf{requestAnimFrame:} Requests an animation frame for various browsers and times out if no applicable animation frame is available.
+
+%---------------------------------------------------------------------
+\section{\textcolor{red}{Changes}}
+\textbf{ANTICIPATED:}
+\begin{enumerate}
+\item Additional functionality
+\item Magnitude of game controls
+\item Game media
+\item Increased scope of support
+\end{enumerate}
+
+\textbf{UNLIKELY:}
+\begin{enumerate}
+\item Input and Output
+\item Game mechanics
+\item Execution environment
+\end{enumerate}
+
+%---------------------------------------------------------------------
+\section{\textcolor{red}{Traceability Matrix}}
+The following requirements reference the functional requirements in the document "RequirementsDocumentation1.pdf".
+\begin{table}[H]
+\caption{Requirements Traceability Matrix}
+\begin{center}
+\begin{tabulary}{1\textwidth}{|c|c|}
+\hline
+Requirements & Modules \\
+\hline
+4.4.1 & 8.1;8.5.1\\
+\hline
+4.4.2 & 8.1;8.5.1\\
+\hline
+4.4.3 & 8.1;8.2.9,10\\
+\hline
+4.4.4 & 8.1;8.2.9\\
+\hline
+4.4.5 & 8.2.9,10\\
+\hline
+4.4.6 & 8.1;8.2.9,10\\
+\hline
+4.4.7 & 8.1;8.2;8.3\\
+\hline
+4.4.8 & 8.1;8.2.10\\
+\hline
+4.4.9 & 8.1;8.2\\
+\hline
+4.4.10 & 8.1;8.2\\
+\hline
+\end{tabulary}
+\end{center}
+\label{default}
+\end{table}%
+
+The following anticipated changes reference section 9 of this document.
+\begin{table}[H]
+\caption{Anticipated Changes Traceability Matrix}
+\begin{center}
+\begin{tabulary}{1\textwidth}{|c|c|}
+\hline
+Anticipated Changes & Modules \\
+\hline
+1 & 8.2\\
+\hline
+2 & 8.2.5\\
+\hline
+3 & 8.2;8.4\\
+\hline
+4 & 8.5\\
+\hline
+\end{tabulary}
+\end{center}
+\label{default}
+\end{table}%
+%---------------------------------------------------------------------
+\end{document}  

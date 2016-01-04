@@ -1,0 +1,151 @@
+\contentsline {section}{\numberline {1}Revision History}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}\leavevmode {\color {red}Legend}}{5}{subsection.1.1}
+\contentsline {section}{\numberline {2}Introduction}{6}{section.2}
+\contentsline {section}{\numberline {3}Module Hierarchy}{7}{section.3}
+\contentsline {section}{\numberline {4}\leavevmode {\color {blue}MIS's of Main.js}}{8}{section.4}
+\contentsline {subsubsection}{\numberline {4.0.1}\texttt {Flappy\_Fish.Draw}}{8}{subsubsection.4.0.1}
+\contentsline {subsubsection}{\numberline {4.0.2}Assumptions}{8}{subsubsection.4.0.2}
+\contentsline {subsubsection}{\numberline {4.0.3}State Variables}{8}{subsubsection.4.0.3}
+\contentsline {subsubsection}{\numberline {4.0.4}Environment Variables}{8}{subsubsection.4.0.4}
+\contentsline {subsubsection}{\numberline {4.0.5}Access Program Semantics}{8}{subsubsection.4.0.5}
+\contentsline {subsubsection}{\numberline {4.0.6}\texttt {Flappy\_Fish.Input}}{8}{subsubsection.4.0.6}
+\contentsline {subsubsection}{\numberline {4.0.7}Assumptions}{9}{subsubsection.4.0.7}
+\contentsline {subsubsection}{\numberline {4.0.8}State Variables}{9}{subsubsection.4.0.8}
+\contentsline {subsubsection}{\numberline {4.0.9}Environment Variables}{9}{subsubsection.4.0.9}
+\contentsline {subsubsection}{\numberline {4.0.10}Access Program Semantics}{9}{subsubsection.4.0.10}
+\contentsline {subsubsection}{\numberline {4.0.11}\texttt {Flappy\_Fish.BottomBar}}{9}{subsubsection.4.0.11}
+\contentsline {subsubsection}{\numberline {4.0.12}Assumptions}{9}{subsubsection.4.0.12}
+\contentsline {subsubsection}{\numberline {4.0.13}State Variables}{9}{subsubsection.4.0.13}
+\contentsline {subsubsection}{\numberline {4.0.14}Environment Variables}{9}{subsubsection.4.0.14}
+\contentsline {subsubsection}{\numberline {4.0.15}Access Program Semantics}{10}{subsubsection.4.0.15}
+\contentsline {subsubsection}{\numberline {4.0.16}\texttt {Flappy\_Fish.Pipe}}{10}{subsubsection.4.0.16}
+\contentsline {subsubsection}{\numberline {4.0.17}Assumptions}{10}{subsubsection.4.0.17}
+\contentsline {subsubsection}{\numberline {4.0.18}State Variables}{10}{subsubsection.4.0.18}
+\contentsline {subsubsection}{\numberline {4.0.19}Environment Variables}{10}{subsubsection.4.0.19}
+\contentsline {subsubsection}{\numberline {4.0.20}Access Program Semantics}{11}{subsubsection.4.0.20}
+\contentsline {subsubsection}{\numberline {4.0.21}\texttt {Flappy\_Fish.Bird}}{11}{subsubsection.4.0.21}
+\contentsline {subsubsection}{\numberline {4.0.22}Assumptions}{11}{subsubsection.4.0.22}
+\contentsline {subsubsection}{\numberline {4.0.23}State Variables}{11}{subsubsection.4.0.23}
+\contentsline {subsubsection}{\numberline {4.0.24}Environment Variables}{12}{subsubsection.4.0.24}
+\contentsline {subsubsection}{\numberline {4.0.25}Access Program Semantics}{12}{subsubsection.4.0.25}
+\contentsline {subsubsection}{\numberline {4.0.26}\texttt {Flappy\_Fish.Particle}}{12}{subsubsection.4.0.26}
+\contentsline {subsubsection}{\numberline {4.0.27}Assumptions}{12}{subsubsection.4.0.27}
+\contentsline {subsubsection}{\numberline {4.0.28}State Variables}{12}{subsubsection.4.0.28}
+\contentsline {subsubsection}{\numberline {4.0.29}Environment Variables}{13}{subsubsection.4.0.29}
+\contentsline {subsubsection}{\numberline {4.0.30}Access Program Semantics}{13}{subsubsection.4.0.30}
+\contentsline {subsubsection}{\numberline {4.0.31}\texttt {Flappy\_Fish.Collides}}{13}{subsubsection.4.0.31}
+\contentsline {subsubsection}{\numberline {4.0.32}Assumptions}{13}{subsubsection.4.0.32}
+\contentsline {subsubsection}{\numberline {4.0.33}State Variables}{13}{subsubsection.4.0.33}
+\contentsline {subsubsection}{\numberline {4.0.34}Environment Variables}{14}{subsubsection.4.0.34}
+\contentsline {subsubsection}{\numberline {4.0.35}Access Program Semantics}{14}{subsubsection.4.0.35}
+\contentsline {subsubsection}{\numberline {4.0.36}\texttt {Window.Splash}}{14}{subsubsection.4.0.36}
+\contentsline {subsubsection}{\numberline {4.0.37}Assumptions}{14}{subsubsection.4.0.37}
+\contentsline {subsubsection}{\numberline {4.0.38}State Variables}{14}{subsubsection.4.0.38}
+\contentsline {subsubsection}{\numberline {4.0.39}Environment Variables}{14}{subsubsection.4.0.39}
+\contentsline {subsubsection}{\numberline {4.0.40}Access Program Semantics}{14}{subsubsection.4.0.40}
+\contentsline {subsubsection}{\numberline {4.0.41}\texttt {Window.Play}}{15}{subsubsection.4.0.41}
+\contentsline {subsubsection}{\numberline {4.0.42}Assumptions}{15}{subsubsection.4.0.42}
+\contentsline {subsubsection}{\numberline {4.0.43}State Variables}{15}{subsubsection.4.0.43}
+\contentsline {subsubsection}{\numberline {4.0.44}Environment Variables}{15}{subsubsection.4.0.44}
+\contentsline {subsubsection}{\numberline {4.0.45}Access Program Semantics}{15}{subsubsection.4.0.45}
+\contentsline {subsubsection}{\numberline {4.0.46}\texttt {Window.GameOver}}{16}{subsubsection.4.0.46}
+\contentsline {subsubsection}{\numberline {4.0.47}Assumptions}{16}{subsubsection.4.0.47}
+\contentsline {subsubsection}{\numberline {4.0.48}State Variables}{16}{subsubsection.4.0.48}
+\contentsline {subsubsection}{\numberline {4.0.49}Environment Variables}{16}{subsubsection.4.0.49}
+\contentsline {subsubsection}{\numberline {4.0.50}Access Program Semantics}{16}{subsubsection.4.0.50}
+\contentsline {section}{\numberline {5}\leavevmode {\color {blue}MIS of cookieHandler.js}}{17}{section.5}
+\contentsline {subsubsection}{\numberline {5.0.1}\texttt {cookieHandler.js}}{17}{subsubsection.5.0.1}
+\contentsline {subsubsection}{\numberline {5.0.2}Assumptions}{17}{subsubsection.5.0.2}
+\contentsline {subsubsection}{\numberline {5.0.3}State Variables}{17}{subsubsection.5.0.3}
+\contentsline {subsubsection}{\numberline {5.0.4}Environment Variables}{17}{subsubsection.5.0.4}
+\contentsline {subsubsection}{\numberline {5.0.5}Access Program Semantics}{17}{subsubsection.5.0.5}
+\contentsline {section}{\numberline {6}\leavevmode {\color {blue}MIS of sound.js}}{18}{section.6}
+\contentsline {subsubsection}{\numberline {6.0.1}\texttt {sound.js}}{18}{subsubsection.6.0.1}
+\contentsline {subsubsection}{\numberline {6.0.2}Assumptions}{18}{subsubsection.6.0.2}
+\contentsline {subsubsection}{\numberline {6.0.3}State Variables}{18}{subsubsection.6.0.3}
+\contentsline {subsubsection}{\numberline {6.0.4}Environment Variables}{18}{subsubsection.6.0.4}
+\contentsline {subsubsection}{\numberline {6.0.5}Access Program Semantics}{18}{subsubsection.6.0.5}
+\contentsline {section}{\numberline {7}\leavevmode {\color {blue}MIS of windowSetter.js}}{18}{section.7}
+\contentsline {subsubsection}{\numberline {7.0.1}\texttt {window.requestAnimFrame}}{18}{subsubsection.7.0.1}
+\contentsline {subsubsection}{\numberline {7.0.2}Assumptions}{19}{subsubsection.7.0.2}
+\contentsline {subsubsection}{\numberline {7.0.3}State Variables}{19}{subsubsection.7.0.3}
+\contentsline {subsubsection}{\numberline {7.0.4}Environment Variables}{19}{subsubsection.7.0.4}
+\contentsline {subsubsection}{\numberline {7.0.5}Access Program Semantics}{19}{subsubsection.7.0.5}
+\contentsline {section}{\numberline {8}\leavevmode {\color {red}MIS}}{19}{section.8}
+\contentsline {subsection}{\numberline {8.1}Namespace.js}{19}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}\texttt {Flappy\_Fish}}{19}{subsubsection.8.1.1}
+\contentsline {paragraph}{\numberline {8.1.1.1}Assumptions}{19}{paragraph.8.1.1.1}
+\contentsline {paragraph}{\numberline {8.1.1.2}State Variables}{19}{paragraph.8.1.1.2}
+\contentsline {paragraph}{\numberline {8.1.1.3}Environment Variables}{20}{paragraph.8.1.1.3}
+\contentsline {paragraph}{\numberline {8.1.1.4}Access Program Semantics}{20}{paragraph.8.1.1.4}
+\contentsline {subsection}{\numberline {8.2}Main.js}{21}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}\texttt {Flappy\_Fish.Draw}}{21}{subsubsection.8.2.1}
+\contentsline {paragraph}{\numberline {8.2.1.1}Assumptions}{21}{paragraph.8.2.1.1}
+\contentsline {paragraph}{\numberline {8.2.1.2}State Variables}{21}{paragraph.8.2.1.2}
+\contentsline {paragraph}{\numberline {8.2.1.3}Environment Variables}{21}{paragraph.8.2.1.3}
+\contentsline {paragraph}{\numberline {8.2.1.4}Access Program Semantics}{21}{paragraph.8.2.1.4}
+\contentsline {subsubsection}{\numberline {8.2.2}\texttt {Flappy\_Fish.Input}}{21}{subsubsection.8.2.2}
+\contentsline {paragraph}{\numberline {8.2.2.1}Assumptions}{22}{paragraph.8.2.2.1}
+\contentsline {paragraph}{\numberline {8.2.2.2}State Variables}{22}{paragraph.8.2.2.2}
+\contentsline {paragraph}{\numberline {8.2.2.3}Environment Variables}{22}{paragraph.8.2.2.3}
+\contentsline {paragraph}{\numberline {8.2.2.4}Access Program Semantics}{22}{paragraph.8.2.2.4}
+\contentsline {subsubsection}{\numberline {8.2.3}\texttt {Flappy\_Fish.BottomBar}}{22}{subsubsection.8.2.3}
+\contentsline {paragraph}{\numberline {8.2.3.1}Assumptions}{22}{paragraph.8.2.3.1}
+\contentsline {paragraph}{\numberline {8.2.3.2}State Variables}{22}{paragraph.8.2.3.2}
+\contentsline {paragraph}{\numberline {8.2.3.3}Environment Variables}{22}{paragraph.8.2.3.3}
+\contentsline {paragraph}{\numberline {8.2.3.4}Access Program Semantics}{23}{paragraph.8.2.3.4}
+\contentsline {subsubsection}{\numberline {8.2.4}\texttt {Flappy\_Fish.Pipe}}{23}{subsubsection.8.2.4}
+\contentsline {paragraph}{\numberline {8.2.4.1}Assumptions}{23}{paragraph.8.2.4.1}
+\contentsline {paragraph}{\numberline {8.2.4.2}State Variables}{23}{paragraph.8.2.4.2}
+\contentsline {paragraph}{\numberline {8.2.4.3}Environment Variables}{23}{paragraph.8.2.4.3}
+\contentsline {paragraph}{\numberline {8.2.4.4}Access Program Semantics}{24}{paragraph.8.2.4.4}
+\contentsline {subsubsection}{\numberline {8.2.5}\texttt {Flappy\_Fish.Bird}}{24}{subsubsection.8.2.5}
+\contentsline {paragraph}{\numberline {8.2.5.1}Assumptions}{24}{paragraph.8.2.5.1}
+\contentsline {paragraph}{\numberline {8.2.5.2}State Variables}{24}{paragraph.8.2.5.2}
+\contentsline {paragraph}{\numberline {8.2.5.3}Environment Variables}{25}{paragraph.8.2.5.3}
+\contentsline {paragraph}{\numberline {8.2.5.4}Access Program Semantics}{25}{paragraph.8.2.5.4}
+\contentsline {subsubsection}{\numberline {8.2.6}\texttt {Flappy\_Fish.Particle}}{25}{subsubsection.8.2.6}
+\contentsline {paragraph}{\numberline {8.2.6.1}Assumptions}{25}{paragraph.8.2.6.1}
+\contentsline {paragraph}{\numberline {8.2.6.2}State Variables}{25}{paragraph.8.2.6.2}
+\contentsline {paragraph}{\numberline {8.2.6.3}Environment Variables}{26}{paragraph.8.2.6.3}
+\contentsline {paragraph}{\numberline {8.2.6.4}Access Program Semantics}{26}{paragraph.8.2.6.4}
+\contentsline {subsubsection}{\numberline {8.2.7}\texttt {Flappy\_Fish.Collides}}{26}{subsubsection.8.2.7}
+\contentsline {paragraph}{\numberline {8.2.7.1}Assumptions}{26}{paragraph.8.2.7.1}
+\contentsline {paragraph}{\numberline {8.2.7.2}State Variables}{26}{paragraph.8.2.7.2}
+\contentsline {paragraph}{\numberline {8.2.7.3}Environment Variables}{27}{paragraph.8.2.7.3}
+\contentsline {paragraph}{\numberline {8.2.7.4}Access Program Semantics}{27}{paragraph.8.2.7.4}
+\contentsline {subsubsection}{\numberline {8.2.8}\texttt {Window.Splash}}{27}{subsubsection.8.2.8}
+\contentsline {paragraph}{\numberline {8.2.8.1}Assumptions}{27}{paragraph.8.2.8.1}
+\contentsline {paragraph}{\numberline {8.2.8.2}State Variables}{27}{paragraph.8.2.8.2}
+\contentsline {paragraph}{\numberline {8.2.8.3}Environment Variables}{27}{paragraph.8.2.8.3}
+\contentsline {paragraph}{\numberline {8.2.8.4}Access Program Semantics}{27}{paragraph.8.2.8.4}
+\contentsline {subsubsection}{\numberline {8.2.9}\texttt {Window.Play}}{28}{subsubsection.8.2.9}
+\contentsline {paragraph}{\numberline {8.2.9.1}Assumptions}{28}{paragraph.8.2.9.1}
+\contentsline {paragraph}{\numberline {8.2.9.2}State Variables}{28}{paragraph.8.2.9.2}
+\contentsline {paragraph}{\numberline {8.2.9.3}Environment Variables}{28}{paragraph.8.2.9.3}
+\contentsline {paragraph}{\numberline {8.2.9.4}Access Program Semantics}{28}{paragraph.8.2.9.4}
+\contentsline {subsubsection}{\numberline {8.2.10}\texttt {Window.GameOver}}{29}{subsubsection.8.2.10}
+\contentsline {paragraph}{\numberline {8.2.10.1}Assumptions}{29}{paragraph.8.2.10.1}
+\contentsline {paragraph}{\numberline {8.2.10.2}State Variables}{29}{paragraph.8.2.10.2}
+\contentsline {paragraph}{\numberline {8.2.10.3}Environment Variables}{29}{paragraph.8.2.10.3}
+\contentsline {paragraph}{\numberline {8.2.10.4}Access Program Semantics}{29}{paragraph.8.2.10.4}
+\contentsline {subsection}{\numberline {8.3}cookieHandler.js}{30}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}\texttt {cookieHandler.js}}{30}{subsubsection.8.3.1}
+\contentsline {paragraph}{\numberline {8.3.1.1}Assumptions}{30}{paragraph.8.3.1.1}
+\contentsline {paragraph}{\numberline {8.3.1.2}State Variables}{30}{paragraph.8.3.1.2}
+\contentsline {paragraph}{\numberline {8.3.1.3}Environment Variables}{30}{paragraph.8.3.1.3}
+\contentsline {paragraph}{\numberline {8.3.1.4}Access Program Semantics}{30}{paragraph.8.3.1.4}
+\contentsline {subsection}{\numberline {8.4}sound.js}{30}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}\texttt {sound.js}}{30}{subsubsection.8.4.1}
+\contentsline {paragraph}{\numberline {8.4.1.1}Assumptions}{31}{paragraph.8.4.1.1}
+\contentsline {paragraph}{\numberline {8.4.1.2}State Variables}{31}{paragraph.8.4.1.2}
+\contentsline {paragraph}{\numberline {8.4.1.3}Environment Variables}{31}{paragraph.8.4.1.3}
+\contentsline {paragraph}{\numberline {8.4.1.4}Access Program Semantics}{31}{paragraph.8.4.1.4}
+\contentsline {subsection}{\numberline {8.5}windowSetter.js}{31}{subsection.8.5}
+\contentsline {subsubsection}{\numberline {8.5.1}\texttt {window.requestAnimFrame}}{31}{subsubsection.8.5.1}
+\contentsline {paragraph}{\numberline {8.5.1.1}Assumptions}{31}{paragraph.8.5.1.1}
+\contentsline {paragraph}{\numberline {8.5.1.2}State Variables}{31}{paragraph.8.5.1.2}
+\contentsline {paragraph}{\numberline {8.5.1.3}Environment Variables}{31}{paragraph.8.5.1.3}
+\contentsline {paragraph}{\numberline {8.5.1.4}Access Program Semantics}{32}{paragraph.8.5.1.4}
+\contentsline {section}{\numberline {9}\leavevmode {\color {red}Changes}}{32}{section.9}
+\contentsline {section}{\numberline {10}\leavevmode {\color {red}Traceability Matrix}}{32}{section.10}

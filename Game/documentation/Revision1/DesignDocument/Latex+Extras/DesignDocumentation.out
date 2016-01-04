@@ -1,0 +1,95 @@
+\BOOKMARK [1][-]{section.1}{Revision History}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Legend}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.3}{Module Hierarchy}{}% 4
+\BOOKMARK [1][-]{section.4}{MIS's of Main.js}{}% 5
+\BOOKMARK [2][-]{subsubsection.4.0.1}{Flappy\137Fish.Draw}{section.4}% 6
+\BOOKMARK [3][-]{subsubsection.4.0.2}{Assumptions}{subsubsection.4.0.1}% 7
+\BOOKMARK [3][-]{subsubsection.4.0.3}{State Variables}{subsubsection.4.0.1}% 8
+\BOOKMARK [3][-]{subsubsection.4.0.4}{Environment Variables}{subsubsection.4.0.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.0.5}{Access Program Semantics}{subsubsection.4.0.1}% 10
+\BOOKMARK [3][-]{subsubsection.4.0.6}{Flappy\137Fish.Input}{subsubsection.4.0.1}% 11
+\BOOKMARK [3][-]{subsubsection.4.0.7}{Assumptions}{subsubsection.4.0.1}% 12
+\BOOKMARK [3][-]{subsubsection.4.0.8}{State Variables}{subsubsection.4.0.1}% 13
+\BOOKMARK [3][-]{subsubsection.4.0.9}{Environment Variables}{subsubsection.4.0.1}% 14
+\BOOKMARK [3][-]{subsubsection.4.0.10}{Access Program Semantics}{subsubsection.4.0.1}% 15
+\BOOKMARK [3][-]{subsubsection.4.0.11}{Flappy\137Fish.BottomBar}{subsubsection.4.0.1}% 16
+\BOOKMARK [3][-]{subsubsection.4.0.12}{Assumptions}{subsubsection.4.0.1}% 17
+\BOOKMARK [3][-]{subsubsection.4.0.13}{State Variables}{subsubsection.4.0.1}% 18
+\BOOKMARK [3][-]{subsubsection.4.0.14}{Environment Variables}{subsubsection.4.0.1}% 19
+\BOOKMARK [3][-]{subsubsection.4.0.15}{Access Program Semantics}{subsubsection.4.0.1}% 20
+\BOOKMARK [3][-]{subsubsection.4.0.16}{Flappy\137Fish.Pipe}{subsubsection.4.0.1}% 21
+\BOOKMARK [3][-]{subsubsection.4.0.17}{Assumptions}{subsubsection.4.0.1}% 22
+\BOOKMARK [3][-]{subsubsection.4.0.18}{State Variables}{subsubsection.4.0.1}% 23
+\BOOKMARK [3][-]{subsubsection.4.0.19}{Environment Variables}{subsubsection.4.0.1}% 24
+\BOOKMARK [3][-]{subsubsection.4.0.20}{Access Program Semantics}{subsubsection.4.0.1}% 25
+\BOOKMARK [3][-]{subsubsection.4.0.21}{Flappy\137Fish.Bird}{subsubsection.4.0.1}% 26
+\BOOKMARK [3][-]{subsubsection.4.0.22}{Assumptions}{subsubsection.4.0.1}% 27
+\BOOKMARK [3][-]{subsubsection.4.0.23}{State Variables}{subsubsection.4.0.1}% 28
+\BOOKMARK [3][-]{subsubsection.4.0.24}{Environment Variables}{subsubsection.4.0.1}% 29
+\BOOKMARK [3][-]{subsubsection.4.0.25}{Access Program Semantics}{subsubsection.4.0.1}% 30
+\BOOKMARK [3][-]{subsubsection.4.0.26}{Flappy\137Fish.Particle}{subsubsection.4.0.1}% 31
+\BOOKMARK [3][-]{subsubsection.4.0.27}{Assumptions}{subsubsection.4.0.1}% 32
+\BOOKMARK [3][-]{subsubsection.4.0.28}{State Variables}{subsubsection.4.0.1}% 33
+\BOOKMARK [3][-]{subsubsection.4.0.29}{Environment Variables}{subsubsection.4.0.1}% 34
+\BOOKMARK [3][-]{subsubsection.4.0.30}{Access Program Semantics}{subsubsection.4.0.1}% 35
+\BOOKMARK [3][-]{subsubsection.4.0.31}{Flappy\137Fish.Collides}{subsubsection.4.0.1}% 36
+\BOOKMARK [3][-]{subsubsection.4.0.32}{Assumptions}{subsubsection.4.0.1}% 37
+\BOOKMARK [3][-]{subsubsection.4.0.33}{State Variables}{subsubsection.4.0.1}% 38
+\BOOKMARK [3][-]{subsubsection.4.0.34}{Environment Variables}{subsubsection.4.0.1}% 39
+\BOOKMARK [3][-]{subsubsection.4.0.35}{Access Program Semantics}{subsubsection.4.0.1}% 40
+\BOOKMARK [3][-]{subsubsection.4.0.36}{Window.Splash}{subsubsection.4.0.1}% 41
+\BOOKMARK [3][-]{subsubsection.4.0.37}{Assumptions}{subsubsection.4.0.1}% 42
+\BOOKMARK [3][-]{subsubsection.4.0.38}{State Variables}{subsubsection.4.0.1}% 43
+\BOOKMARK [3][-]{subsubsection.4.0.39}{Environment Variables}{subsubsection.4.0.1}% 44
+\BOOKMARK [3][-]{subsubsection.4.0.40}{Access Program Semantics}{subsubsection.4.0.1}% 45
+\BOOKMARK [3][-]{subsubsection.4.0.41}{Window.Play}{subsubsection.4.0.1}% 46
+\BOOKMARK [3][-]{subsubsection.4.0.42}{Assumptions}{subsubsection.4.0.1}% 47
+\BOOKMARK [3][-]{subsubsection.4.0.43}{State Variables}{subsubsection.4.0.1}% 48
+\BOOKMARK [3][-]{subsubsection.4.0.44}{Environment Variables}{subsubsection.4.0.1}% 49
+\BOOKMARK [3][-]{subsubsection.4.0.45}{Access Program Semantics}{subsubsection.4.0.1}% 50
+\BOOKMARK [3][-]{subsubsection.4.0.46}{Window.GameOver}{subsubsection.4.0.1}% 51
+\BOOKMARK [3][-]{subsubsection.4.0.47}{Assumptions}{subsubsection.4.0.1}% 52
+\BOOKMARK [3][-]{subsubsection.4.0.48}{State Variables}{subsubsection.4.0.1}% 53
+\BOOKMARK [3][-]{subsubsection.4.0.49}{Environment Variables}{subsubsection.4.0.1}% 54
+\BOOKMARK [3][-]{subsubsection.4.0.50}{Access Program Semantics}{subsubsection.4.0.1}% 55
+\BOOKMARK [1][-]{section.5}{MIS of cookieHandler.js}{}% 56
+\BOOKMARK [2][-]{subsubsection.5.0.1}{cookieHandler.js}{section.5}% 57
+\BOOKMARK [3][-]{subsubsection.5.0.2}{Assumptions}{subsubsection.5.0.1}% 58
+\BOOKMARK [3][-]{subsubsection.5.0.3}{State Variables}{subsubsection.5.0.1}% 59
+\BOOKMARK [3][-]{subsubsection.5.0.4}{Environment Variables}{subsubsection.5.0.1}% 60
+\BOOKMARK [3][-]{subsubsection.5.0.5}{Access Program Semantics}{subsubsection.5.0.1}% 61
+\BOOKMARK [1][-]{section.6}{MIS of sound.js}{}% 62
+\BOOKMARK [2][-]{subsubsection.6.0.1}{sound.js}{section.6}% 63
+\BOOKMARK [3][-]{subsubsection.6.0.2}{Assumptions}{subsubsection.6.0.1}% 64
+\BOOKMARK [3][-]{subsubsection.6.0.3}{State Variables}{subsubsection.6.0.1}% 65
+\BOOKMARK [3][-]{subsubsection.6.0.4}{Environment Variables}{subsubsection.6.0.1}% 66
+\BOOKMARK [3][-]{subsubsection.6.0.5}{Access Program Semantics}{subsubsection.6.0.1}% 67
+\BOOKMARK [1][-]{section.7}{MIS of windowSetter.js}{}% 68
+\BOOKMARK [2][-]{subsubsection.7.0.1}{window.requestAnimFrame}{section.7}% 69
+\BOOKMARK [3][-]{subsubsection.7.0.2}{Assumptions}{subsubsection.7.0.1}% 70
+\BOOKMARK [3][-]{subsubsection.7.0.3}{State Variables}{subsubsection.7.0.1}% 71
+\BOOKMARK [3][-]{subsubsection.7.0.4}{Environment Variables}{subsubsection.7.0.1}% 72
+\BOOKMARK [3][-]{subsubsection.7.0.5}{Access Program Semantics}{subsubsection.7.0.1}% 73
+\BOOKMARK [1][-]{section.8}{MIS}{}% 74
+\BOOKMARK [2][-]{subsection.8.1}{Namespace.js}{section.8}% 75
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Flappy\137Fish}{subsection.8.1}% 76
+\BOOKMARK [2][-]{subsection.8.2}{Main.js}{section.8}% 77
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Flappy\137Fish.Draw}{subsection.8.2}% 78
+\BOOKMARK [3][-]{subsubsection.8.2.2}{Flappy\137Fish.Input}{subsection.8.2}% 79
+\BOOKMARK [3][-]{subsubsection.8.2.3}{Flappy\137Fish.BottomBar}{subsection.8.2}% 80
+\BOOKMARK [3][-]{subsubsection.8.2.4}{Flappy\137Fish.Pipe}{subsection.8.2}% 81
+\BOOKMARK [3][-]{subsubsection.8.2.5}{Flappy\137Fish.Bird}{subsection.8.2}% 82
+\BOOKMARK [3][-]{subsubsection.8.2.6}{Flappy\137Fish.Particle}{subsection.8.2}% 83
+\BOOKMARK [3][-]{subsubsection.8.2.7}{Flappy\137Fish.Collides}{subsection.8.2}% 84
+\BOOKMARK [3][-]{subsubsection.8.2.8}{Window.Splash}{subsection.8.2}% 85
+\BOOKMARK [3][-]{subsubsection.8.2.9}{Window.Play}{subsection.8.2}% 86
+\BOOKMARK [3][-]{subsubsection.8.2.10}{Window.GameOver}{subsection.8.2}% 87
+\BOOKMARK [2][-]{subsection.8.3}{cookieHandler.js}{section.8}% 88
+\BOOKMARK [3][-]{subsubsection.8.3.1}{cookieHandler.js}{subsection.8.3}% 89
+\BOOKMARK [2][-]{subsection.8.4}{sound.js}{section.8}% 90
+\BOOKMARK [3][-]{subsubsection.8.4.1}{sound.js}{subsection.8.4}% 91
+\BOOKMARK [2][-]{subsection.8.5}{windowSetter.js}{section.8}% 92
+\BOOKMARK [3][-]{subsubsection.8.5.1}{window.requestAnimFrame}{subsection.8.5}% 93
+\BOOKMARK [1][-]{section.9}{Changes}{}% 94
+\BOOKMARK [1][-]{section.10}{Traceability Matrix}{}% 95
